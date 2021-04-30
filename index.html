@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoHub Website">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -19,7 +20,7 @@
       top: 0;
       text-align: center;
     }
-    .carousel-caption h5{
+    .carousel-caption h2{
         font-size: 30px;
         font-weight: bold;
     }
@@ -32,7 +33,7 @@
       filter: invert(100%);
   }
   @media screen and (max-width:886px){
-    .carousel-caption h5{
+    .carousel-caption h2{
         font-size: 25px;
     }
     .carousel-caption p{
@@ -41,7 +42,7 @@
 }
 
 @media screen and (max-width:556px){
-    .carousel-caption h5{
+    .carousel-caption h2{
         font-size: 20px;
     }
     .carousel-caption p{
@@ -50,20 +51,36 @@
 }
   </style>
 <body>
-    <div class="divide">
+    
         <div class="header">
             <nav>
                 <ul>
-                    <li class="logo"><a href="#">Auto<span>Hub</span></a></li>
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">New Cars</a></li>
-                    <li class="nav-item"><a href="#">Reviews</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="logo"><a href="index.html">Auto<span>Hub</span></a></li>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="./Cars/Cars.html">New Cars</a></li>
+                    <li class="nav-item"><a href="./Contact/Contact.html">Contact</a></li>
+                    
+                    <li class="nav-item">
+                          <div class="dropdown" id="max-search">
+                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                                <i class="fas fa-search" style="margin-left:5px; margin-top:8px;"></i>
+                            </button>
+                            <ul class="dropdown-menu" id="dropdown-menu">
+                              <li><a class="dropdown-item" id="dropdown-item" href="#">
+                                <input type="search" class="form-control rounded" placeholder="Search"/> 
+                                </a>
+                            </li>
+                            </ul>
+                          </div>
+                    </li>
+                    <li class="nav-item">
+                        <input type="search" class="form-control rounded" id="res-search" placeholder="Search"/> 
+                    </li>
                     <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
             </nav>
         </div>
-        
+        <div class="divide">
         <div class="hero">
             <div class="col-1">
                 <div class="left-content">
@@ -81,23 +98,23 @@
                     </div>
                     <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="images/nissan.png" class="d-block w-100" alt="...">
+                        <img src="images/nissan-min.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-md-block">
-                        <h5>Nissan 370Z</h5>
+                        <h2>Nissan 370Z</h2>
                         <p>Legendary Z Performance.</p>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="images/audi.png" class="d-block w-100" alt="...">
+                        <img src="images/audi3-min.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-md-block">
-                        <h5>Audi A7</h5>
+                        <h2>Audi A7</h2>
                         <p>Luxury Sedan.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/bugati.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-md-block">
-                        <h5>Bugati Veyron eb 16.4</h5>
+                        <h2>Bugati Veyron eb 16.4</h2>
                         <p>Grand Sport Vitesse With New Finesse.</p>
                         </div>
                     </div>
@@ -124,7 +141,7 @@
         <div class="card-container">
             <div class="card-item">
                 <div class="card">
-                    <img class="card-img" src="images/chevrolet.jpg" alt="">
+                    <img class="card-img" src="images/chevrolet-min.jpg" alt="">
                     <div class="card-content">
                         <h1>Chevrolet Camaro</h1>
                         <p>This is pure adrenaline. From its iconic shape to the agile, quick-to-respond handling, everything about the Camaro is equipped to deliver high-performance thrills.</p>
@@ -136,7 +153,7 @@
             </div>
             <div class="card-item">
                 <div class="card">
-                    <img class="card-img" src="images/ford.jpg" alt="">
+                    <img class="card-img" src="images/ford-min.jpg" alt="">
                     <div class="card-content">
                         <h1>Ford Explorer</h1>
                         <p>The 2021 Ford Explorer is primed for modern-day exploration. Its adjustable interior offers space and comfort for the whole family. </p>
@@ -148,10 +165,10 @@
             </div>
             <div class="card-item">
                 <div class="card">
-                    <img class="card-img" src="images/civic.jpg" alt="">
+                    <img class="card-img" src="images/civic-min.jpg" alt="">
                     <div class="card-content">
                         <h1>Honda Civic Sedan</h1>
-                        <p>The 2021 Civic Sedan features aggressive lines and refined features that make it stand out from the crowd. Sleek profile and a bold Sport trim add to its fierce personality.
+                        <p>The 2021 Civic Sedan features aggressiveness that make it stand out from the crowd. Sleek profile and a bold Sport trim add to its fierce personality.
                         </p>
                         <button class=card-btn>
                             View <span>&rarr;</span>
@@ -210,6 +227,9 @@
         <div class="right-text">
             <h2>Ideas start the future.</h2>
             <p>Progress meets power in the meticulously crafted Audi e-⁠tron GT and its sportier RS e-⁠tron GT counterpart. Equipped with quattro all-wheel drive, these fully electric grand touring models are sure to change the way you think about electric driving.</p>
+            <button class=card3-btn>
+                View <span>&rarr;</span>
+            </button>
         </div>
         <img src="images/bumble.jpg" alt="...">
     </div>
@@ -217,6 +237,9 @@
         <div class="left-text">
             <h2>Stop looking. Start driving.</h2>
             <p>Don’t miss your chance to find the 2021 Audi model you want, at a rate you’ll love. For a limited time, highly qualified customers can get 0% APR* financing for 60 months on select Model Year 2021 vehicles through Audi Financial Services.</p>
+            <button class=card3-btn>
+                 <span>&larr;</span>View
+            </button>
         </div>
         <img src="images/rs.jpg" alt="...">
     </div>
@@ -224,6 +247,9 @@
         <div class="right-text">
             <h2>Performance art.</h2>
             <p>Escape in style in the all-new Audi Q5 Sportback.</p>
+            <button class=card3-btn>
+                View <span>&rarr;</span>
+            </button>
         </div>
         <img src="images/lamb.jpg" alt="...">
     </div>
@@ -231,6 +257,9 @@
         <div class="left-text">
             <h2>The heart of a racer.</h2>
             <p>Sport performance has always been at the core of the Audi identity. Discover our Audi Sport models, learn about our legacy in motorsport history, find out about customer racing opportunities, and more.</p>
+            <button class=card3-btn>
+                <span>&larr;</span>View
+           </button>
         </div>
         <img src="images/bluegati.jpg" alt="...">
     </div>
@@ -251,8 +280,8 @@
                 <div class="footer-cols">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="./Help/faq.html">FAQ</a></li>
+                        <li><a href="./Contact/Contact.html">Contact Us</a></li>
                         <li><a href="#">Dealer Details</a></li>
                         <li><a href="#">Newsroom</a></li>
                         <li><a href="#">Warranty and Services</a></li>
@@ -270,14 +299,15 @@
                 <div class="footer-cols">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="copyright-sec">&copy Copyright 2021 AutoHub Automobile Dealer <br> All rights reserved</div>
    </footer>
 
     <script>
@@ -288,6 +318,7 @@
         });
       });
     </script>
+    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

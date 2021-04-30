@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoHub Dealers Website">
+  <title>Car Specs</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+
+</head>
+<body>
+  <div class="header">
+    <nav>
+        <ul>
+            <li class="logo"><a href="../index.html">Auto<span>Hub</span></a></li>
+            <li class="nav-item"><a href="../index.html">Home</a></li>
+            <li class="nav-item"><a href="../Cars/Cars.html">New Cars</a></li>
+            <li class="nav-item"><a href="../Contact/Contact.html">Contact</a></li>
+            
+            <li class="nav-item">
+                  <div class="dropdown" id="max-search">
+                    <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                        <i class="fas fa-search" style="margin-left:5px; margin-top:8px;"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                      <li><a class="dropdown-item" id="dropdown-item" href="#">
+                        <input type="search" class="form-control rounded" placeholder="Search"/> 
+                        </a>
+                    </li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="nav-item">
+                <input type="search" class="form-control rounded" id="res-search" placeholder="Search"/> 
+            </li>
+            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+    
+    <div class="single-banner">
+      <div class="banner-img">
+        <img src="chev3.jpg" alt="">
+      </div>
+      <div class="banner-text">
+        <h3>2021</h3>
+        <h2>Cheverolet Corvette</h2>
+        <h4>Starting at $ 88,000</h4>
+      </div>
+
+      <div class="banner-text2">
+        <ul>
+          <li>Horsepower <br><span> 495</span></li>
+          <li>0-60 <br><span> 2.9 secs</span></li>
+          <li>Top speed <br><span> 194 mph</span></li>
+        
+          <div class="order-div"><button class="order-btn">Contact Dealer</button></div> 
+        </ul>
+      </div>   
+    </div>
+    
+    <div class="ord-center">
+      <button class="res-btn">Contact Dealer</button>
+    </div>
+
+    <div class="learn-right">
+      <div class="right-text">
+          <h2>HIGHLIGHTS</h2>
+          <div class="grid-container">
+            <div class="grid-2">Torque @ RPM <br><span> 465 @ 5150</span></div>
+            <div class="grid-1">Fuel Injection <br><span> Direct Injection</span></div>
+            <div class="grid-3">Axle Ratio (Manual) <br><span> 4.9</span></div>
+            <div class="grid-4">Transmission <br><span> 8-speed dual clutch</span></div>
+            <div class="grid-5">Displacement <br> <span>6.2L/376 cu. in.</span></div>
+            <div class="grid-6">Frame <br><span>Hybrid Aluminium and Carbon</span></div>
+            <div class="grid-7">Rear Wheels <br><span>11J X 20"</span></div>
+            <div class="grid-8">Front Wheels <br><span>8.5J X 20"</span></div>
+          </div>
+      </div>
+      <img src="sidechev.png" alt="...">
+    </div>
+
+    
+  <div class="cardi-container">
+      <div class="offers">
+        Graphics and Colors
+      </div>
+      <div class="f-box">
+        <div class="cardi-item">
+            <div class="cardi">
+                <img class="cardi-img" src="stripes.webp" alt="">
+                <div class="cardi-content">
+                    <h1>Racing Stripes</h1>
+                    <p>Personalize the appearance of your Corvette with dual racing stripes that run from nose to tail. New and available in Blue, Orange, Red and Yellow, in addition to Carbon Flash, Silver and Midnight Gray.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardi-item">
+            <div class="cardi">
+                <img class="cardi-img" src="stinger.webp" alt="">
+                <div class="cardi-content">
+                    <h1>Stinger stripes</h1>
+                    <p>Add bold Stinger stripes to the hood of your Corvette for a customized look. Available in Carbon Flash/Edge Red, Carbon Flash/Edge Yellow and Carbon Flash/Midnight Silver.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardi-item">
+            <div class="cardi">
+                <img class="cardi-img" src="colors.webp" alt="">
+                <div class="cardi-content">
+                    <h1>New colors</h1>
+                    <p>New exterior colors include Red Mist Metallic Tintcoat† and Silver flare Metallic. New interior color is Sky Cool Gray with Strike yellow stitching and seat belt accents.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="full-spec">
+    <h1>Specifications</h1>
+    <div class="single-spec">
+      <h2>Vehicle</h2>
+      <ul>
+        <li>
+          <div>EPA Classification</div>
+          <div>Two Seater</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Drive Terrain</div>
+          <div>Rear Wheel Drive</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="single-spec">
+      <h2>Engine</h2>
+      <ul>
+        <li>
+          <div>Engine Type</div>
+          <div>Gas V8</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Maximum Horsepower @ RPM</div>
+          <div>
+            490 @ 6450</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Maximum Torque @ RPM</div>
+          <div>
+            465 @ 5150</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Cooling System Capacity</div>
+          <div>
+            NA</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Displacement</div>
+          <div>
+            6.2L/-TBD</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Fuel System
+          </div>
+          <div>
+            Direct Injection</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="single-spec">
+      <h2>Transmission</h2>
+      <ul>
+        <li>
+          <div>Transmission Description</div>
+          <div>Automatic</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>No. of Transmission Speeds</div>
+          <div>8</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Transmission Order Code</div>
+          <div> M1L</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="single-spec">
+      <h2>Brakes</h2>
+      <ul>
+        <li>
+          <div>Brake Type</div>
+          <div>Pwr</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>ABS</div>
+          <div>4-Wheel</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Front Brake Rotors</div>
+          <div>12.6 x -TBD-</div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>Rear Brake Rotors</div>
+          <div>13.6 x -TBD-</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="dimension-right">
+      <div class="dimension-text">
+          <h2>DIMENSIONS</h2>
+          <div class="grid-dimension">
+            <div class="grid-2">Length <br><span>182.3"</span></div>
+            <div class="grid-1">Wheelbase <br><span>107.2"</span></div>
+            <div class="grid-3">Height <br><span> 48.6"</span></div>
+            <div class="grid-4">Width <br><span> 76.1"</span></div>
+            <div class="grid-5">Front Track Width <br> <span>64.9"</span></div>
+            <div class="grid-6">Rear Track Width <br><span>62.4"</span></div>
+          </div>
+      </div>
+      <img src="blueprint.png" alt="...">
+    </div>
+    
+    <div class="end-container">
+      <div class="vertical-line"></div><br>
+      <div class="end-text">
+        <h3>Starting at $ 88,000</h3>
+        <div class="order-div2"><button class="order-btn2">Contact Dealer</button></div>
+      </div>
+    </div>
+
+
+
+    <footer class="footer-sec">
+      <div class="f-container">
+          <div class="f-row">
+              <div class="footer-cols">
+                  <h4>company</h4>
+                  <ul>
+                      <li><a href="#">about us</a></li>
+                      <li><a href="#">our services</a></li>
+                      <li><a href="#">privacy policy</a></li>
+                      <li><a href="#">affiliate program</a></li>
+                  </ul>
+              </div>
+              <div class="footer-cols">
+                  <h4>Support</h4>
+                  <ul>
+                      <li><a href="../Help/faq.html">FAQ</a></li>
+                      <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                      <li><a href="#">Dealer Details</a></li>
+                      <li><a href="#">Newsroom</a></li>
+                      <li><a href="#">Warranty and Services</a></li>
+                  </ul>
+              </div>
+              <div class="footer-cols">
+                  <h4>shop</h4>
+                  <ul>
+                      <li><a href="#">Inventory</a></li>
+                      <li><a href="#">Offers</a></li>
+                      <li><a href="#">Trending cars</a></li>
+                      <li><a href="#">Categories</a></li>
+                  </ul>
+              </div>
+              <div class="footer-cols">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="copyright-sec">&copy Copyright 2021 AutoHub Automobile Dealer <br> All rights reserved</div>
+ </footer>
+
+    <script>
+        $(document).ready(function(){
+        $('.btn').click(function(){
+        $('.nav-item').toggleClass("show");
+        $('ul li').toggleClass("hide");
+        });
+    });
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+

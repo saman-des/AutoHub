@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoHub Dealer">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>FAQs</title>
+</head>
+
+<body>
+    
+        <div class="header">
+            <nav>
+                <ul>
+                    <li class="logo"><a href="../index.html">Auto<span>Hub</span></a></li>
+                    <li class="nav-item"><a href="../index.html">Home</a></li>
+                    <li class="nav-item"><a href="../Cars/Cars.html">New Cars</a></li>
+                    <li class="nav-item"><a href="../Contact/Contact.html">Contact</a></li>
+                    
+                    <li class="nav-item">
+                          <div class="dropdown" id="max-search">
+                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                                <i class="fas fa-search" style="margin-left:5px; margin-top:8px;"></i>
+                            </button>
+                            <ul class="dropdown-menu" id="dropdown-menu">
+                              <li><a class="dropdown-item" id="dropdown-item" href="#">
+                                <input type="search" class="form-control rounded" placeholder="Search"/> 
+                                </a>
+                            </li>
+                            </ul>
+                          </div>
+                    </li>
+                    <li class="nav-item">
+                        <input type="search" class="form-control rounded" id="res-search" placeholder="Search"/> 
+                    </li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="br-nav">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                      <li class="breadcrumb-item active" id="active-crumb" aria-current="page">New Cars</li>
+                      </ol>
+                  </nav>
+                  </div>
+                    <div class="card">
+                        <div class="card-div d-flex flex-column">
+                            <h3 class="font-weight-bold">Frequently Asked Questions</h3> <span class="d-block text-center px-3">If you are new to Q-Answer or looking for answer to your questions. this guide will <br> help you to learn more about our service and their features.</span>
+                        </div>
+                        <div class="card-div-2">
+                            <div class="px-1">
+                                <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control" placeholder="Have a question? Search Now"> <button class="btn btn-primary">Search</button> </div>
+                            </div>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        How long will it take to get a new car?
+
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Prior to taking your order we will check the availability with the manufacturer. If they can locate a vehicle in dealer stock it could be 7 days but a factory order to your specification will be considerably longer.</div>
+                                  </div>
+                                </div><br>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Do I have to collect the vehicle or is it delivered?
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body">
+                                        All the vehicles offered for sale on the website come with free driven delivery to your home address by the supplying dealer. There is a surcharge for vehicles delivered North of Glasgow and Edinburgh which we can get a price for when you are ready to order.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Who do I reach out to regarding financing options?
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body">
+                                        Once you find a car that interests you, please contact the seller directly via the phone number or email lead form on the vehicle listing. Note that none of the inventory on the site is owned or for sale by Cars.com.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingFour">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Can I have the vehicle delivered on a transporter?
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body">
+                                        Yes we can get a price for you no problem. The manufacturers have some great deals on transported delivery so please ask for details.
+                                      </div>
+                                    </div>
+                                  </div>
+
+                              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+    <footer class="footer-sec">
+        <div class="f-container">
+            <div class="f-row">
+                <div class="footer-cols">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-cols">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="../Contact/Contact.html">Contact Us</a></li>
+                        <li><a href="#">Dealer Details</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Warranty and Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-cols">
+                    <h4>shop</h4>
+                    <ul>
+                        <li><a href="#">Inventory</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Trending cars</a></li>
+                        <li><a href="#">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-cols">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+
+    <script>
+        $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.nav-item').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
