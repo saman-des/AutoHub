@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AutoHub Website">
     <link rel="stylesheet" href="style.css">
+    <script src="func.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -133,6 +134,9 @@
         
     </div>
 
+    
+    
+
     <div class="mid-line"></div>
     <div class="offers">
         New Vehicles and Offers
@@ -143,9 +147,9 @@
                 <div class="card">
                     <img class="card-img" src="images/chevrolet-min.jpg" alt="">
                     <div class="card-content">
-                        <h1>Chevrolet Camaro</h1>
+                        <h1>Chevrolet</h1>
                         <p>This is pure adrenaline. From its iconic shape to the agile, quick-to-respond handling, everything about the Camaro is equipped to deliver high-performance thrills.</p>
-                        <button class=card-btn>
+                        <button class=card-btn >
                             View <span>&rarr;</span>
                         </button>
                     </div>
@@ -167,7 +171,7 @@
                 <div class="card">
                     <img class="card-img" src="images/civic-min.jpg" alt="">
                     <div class="card-content">
-                        <h1>Honda Civic Sedan</h1>
+                        <h1>Honda Civic</h1>
                         <p>The 2021 Civic Sedan features aggressiveness that make it stand out from the crowd. Sleek profile and a bold Sport trim add to its fierce personality.
                         </p>
                         <button class=card-btn>
@@ -310,6 +314,33 @@
         <div class="copyright-sec">&copy Copyright 2021 AutoHub Automobile Dealer <br> All rights reserved</div>
    </footer>
 
+
+
+
+
+
+   <div class="access-div">
+    <div class="btn-group dropup">
+        <img src="./images/access.png" class="btn2" data-bs-toggle="dropdown"  style="height: 60px; width: 60px;">
+        <ul class="dropdown-menu">
+            <div class="accForm">
+                <div class="access-header">Accessibility Options</div>
+                <div class="options" >
+                    <button class="access-items" onclick="grayFunction()">
+                        <i class="fas fa-tint"></i> Grayscale <br>
+                    </button>
+                    <button class="access-items" onclick="fontFunction()">
+                        <i class="fas fa-font"></i> Font Size <br>
+                    </button>
+                    <button class="access-items" onclick="invertFunction()">
+                        <i class="fas fa-adjust"></i> Invert Color <br>
+                    </button>
+                </div>
+            </div>
+        </ul>
+      </div>
+    </div>
+
     <script>
         $(document).ready(function(){
         $('.btn').click(function(){
@@ -318,7 +349,22 @@
         });
       });
     </script>
-    
+    <script>
+        function grayFunction() {
+             document.body.style.filter = "grayscale(100%)";
+        }
+
+        function fontFunction(){
+            document.body.style.fontSize = "large";
+            // document.getElementById("headerID").style.fontSize = "100px";
+        }
+        function invertFunction(){
+            document.body.style.filter = "invert(1)";
+        }
+        </script>
+<script>
+   $('.accForm').bind('click', function (e) { e.stopPropagation() })
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
