@@ -1,0 +1,50 @@
+
+.access-div{
+    position: fixed;
+    z-index: 3;
+    width: 70px;
+    height: 80px;
+    bottom: 15px;
+    left: 15px;
+    cursor: pointer;
+ }
+ .dropdown-menu{
+     width: 200px;
+ }
+ 
+
+.accForm{
+    /* padding: 20px; */
+    margin-bottom: 20px;
+}
+.access-header{
+    font-size: 20px;
+    background-color: #05668D;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+.options{
+    width: 90%;
+    margin: 0 auto;
+}
+.access-items{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.access-items:hover{
+    color:#05668D;
+    transform: scale(1.01);
+}
+
+.access-items3{
+    width: 40%;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}

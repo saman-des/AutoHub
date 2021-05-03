@@ -1,0 +1,964 @@
+    <!DOCTYPE html>
+    <html lang="en" id="main-cover">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AutoHub Dealers Website">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="../accessibility.js"></script>
+        <link rel="stylesheet" href="../access-style.css">
+        <title>Cars List</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li class="logo"><a href="../index.html">Auto<span>Hub</span></a></li>
+                    <li class="nav-item"><a href="../index.html">Home</a></li>
+                    <li class="nav-item"><a href="Cars.html">New Cars</a></li>
+                    <li class="nav-item"><a href="../Contact/Contact.html">Contact</a></li>
+                    
+                    <li class="nav-item">
+                          <div class="dropdown" id="max-search">
+                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                                <i class="fas fa-search" style="margin-left:5px; margin-top:8px;"></i>
+                            </button>
+                            <ul class="dropdown-menu" id="dropdown-menu">
+                              <li><a class="dropdown-item" id="dropdown-item" href="#">
+                                <input type="search" class="form-control rounded" placeholder="Search"/> 
+                                </a>
+                            </li>
+                            </ul>
+                          </div>
+                    </li>
+                    <li class="nav-item">
+                        <input type="search" class="form-control rounded" id="res-search" placeholder="Search"/> 
+                    </li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+            
+            <div class="main-div">
+            <div class="categories">
+                <h3 class="filter-cat"><i class="fas fa-filter" style="padding-left: 10px; padding-right: 20px;"></i>Filter</h3>
+                    <div class="col-1-of-4">
+                        <div>
+                            <div class="block-title">
+                                <h4>Price</h4>
+                            </div>
+                                <div class="pricing">
+                                    <input type="number" id="minprice" name="minprice" value="00" min="0"><br>To <br>
+                                    <input type="number" id="maxprice" name="maxprice" value="99000" >
+                                </div> 
+                        </div>
+                        <hr>
+                    <div>
+                        <div class="block-title">
+                        <h4>Company</h4>
+                        </div>
+            
+                        <ul class="block-content">
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Nissan</span>
+                            <small>(10)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Toyota</span>
+                            <small>(7)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Honda</span>
+                            <small>(3)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Chevrolet</span>
+                            <small>(6)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Genesis</span>
+                            <small>(2)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>BMW</span>
+                            <small>(4)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Audi</span>
+                            <small>(10)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Subaru</span>
+                            <small>(6)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Cadillac</span>
+                            <small>(2)</small>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Acura</span>
+                            <small>(3)</small>
+                            </label>
+                        </li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <hr>
+                    <div>
+                        <div class="block-title">
+                        <h4>Type</h4>
+                        </div>
+            
+                        <ul class="block-content">
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>SUVs</span>
+                            <small>(10)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Trucks</span>
+                            <small>(7)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span> Sedans</span>
+                            <small>(12)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Coupes</span>
+                            <small>(3)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Luxury</span>
+                            <small>(7)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Sports Car</span>
+                            <small>(8)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Vans</span>
+                            <small>(10)</small>
+                            </label>
+                        </li>
+            
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                            <span>Electric</span>
+                            <small>(3)</small>
+                            </label>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="filter-btn">
+                        <input id="filter-submit" type="submit" value="Submit">
+                     </div>
+                    </div>
+            </div>
+
+
+            <div class = "products">
+                <div class = "container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" id="active-crumb" aria-current="page">New Cars</li>
+                        </ol>
+                    </nav>
+                    <h1 class = "lg-title">Cars and Offers</h1>
+                        <div class="dropdowns">
+                            <div class="filter-drop">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <i class="fas fa-filter" style="padding-left: 10px; padding-right: 20px;"></i>Filter
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="categories-2">
+                                                <div class="col-1-of-4">
+                                                    <div>
+                                                        <div class="block-title">
+                                                            <h4>Price</h4>
+                                                        </div>
+                                                            <div class="pricing">
+                                                                <input type="number" id="minprice" name="minprice" value="00" min="0"><br>To <br>
+                                                                <input type="number" id="maxprice" name="maxprice" value="99000" >
+                                                            </div> 
+                                                    </div>
+                                                    <hr>
+                                                <div>
+                                                    <div class="block-title">
+                                                    <h4>Company</h4>
+                                                    </div>
+                                        
+                                                    <ul class="block-content">
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Nissan</span>
+                                                        <small>(10)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Toyota</span>
+                                                        <small>(7)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Honda</span>
+                                                        <small>(3)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Chevrolet</span>
+                                                        <small>(6)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Genesis</span>
+                                                        <small>(2)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>BMW</span>
+                                                        <small>(4)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Audi</span>
+                                                        <small>(10)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Subaru</span>
+                                                        <small>(6)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Cadillac</span>
+                                                        <small>(2)</small>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Acura</span>
+                                                        <small>(3)</small>
+                                                        </label>
+                                                    </li>
+                                                    </ul>
+                                                    
+                                                </div>
+                                                
+                                                <hr>
+                                                <div>
+                                                    
+                                                    <div class="block-title">
+                                                    <h4>Type</h4>
+                                                    </div>
+                                        
+                                                    <ul class="block-content">
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>SUVs</span>
+                                                        <small>(10)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Trucks</span>
+                                                        <small>(7)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span> Sedans</span>
+                                                        <small>(12)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Coupes</span>
+                                                        <small>(3)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Luxury</span>
+                                                        <small>(7)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Sports Car</span>
+                                                        <small>(8)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Vans</span>
+                                                        <small>(10)</small>
+                                                        </label>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <input type="checkbox" name="" id="">
+                                                        <label for="">
+                                                        <span>Electric</span>
+                                                        <small>(3)</small>
+                                                        </label>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="filter-btn2">
+                                                <input id="filter-submit" type="submit" value="Submit">
+                                             </div>                                       
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sort-btn">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Price Low to High</a>
+                                        <a class="dropdown-item" href="#">Price High to Low</a>
+                                        <a class="dropdown-item" href="#">Most Relevant</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class = "product-items">
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/kia.webp" alt = "kia">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Kia</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Kia Forte LXS</a>
+                                <p class = "product-price">$ 18,998.00</p>
+                            </div>
+
+                            <div class = "off-info">
+                                <h2 class = "sm-title">New Model</h2>
+                            </div>
+                        </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/civic.webp" alt = "civic">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Honda</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Honda Civic LX</a>
+                                <p class = "product-price">$ 29,998.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/acura.webp" alt = "acura">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Acura</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Acura RDX</a>
+                                <p class = "product-price">$ 39,998.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/camaro.webp" alt = "camaro">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Chevrolet</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Chevrolet Camaro</a>
+                                <p class = "product-price">$ 27,778.00</p>
+                            </div>
+
+                            <div class = "off-info">
+                                <h2 class = "sm-title">Trending</h2>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/genesis.webp" alt = "genesis">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Genesis</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Genesis G70</a>
+                                <p class = "product-price">$ 44,400.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/subaru.webp" alt = "subaru">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Subaru</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Subaru Ascent Limited</a>
+                                <p class = "product-price">$ 35,000.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/corolla.webp" alt = "corolla">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Toyota</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Toyota Corolla SE</a>
+                                <p class = "product-price">$ 21,000.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <!-- single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/prius.webp" alt = "prius">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Toyota</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Toyota Prius LE</a>
+                                <p class = "product-price">$ 28,000.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- end of single product -->
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/q3.webp" alt = "q3-audi">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Audi</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Audi Q3 Premium</a>
+                                <p class = "product-price">$ 35,000.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/grancoupe.webp" alt = "grancoupe">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">BMW</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">BMW 228 XI Gran Coupe</a>
+                                <p class = "product-price">$ 38,888.00</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/cadillac.webp" alt = "cadillac">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Cadillac</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Cadillac CT4V</a>
+                                <p class = "product-price">$ 29,000.00</p>
+                            </div>
+                            <div class = "off-info">
+                                <h2 class = "sm-title">Limited</h2>
+                            </div>
+                            </a>
+                        </div>
+                        <div class = "product">
+                            <a href="../Specs/specs.html" style="color: black; text-decoration: none;">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "../images/corvette.webp" alt = "corvette">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-deal"> View Dealers
+                                        <span><i class = "fas fa-street-view"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-view"> Quick View
+                                        <span><i class = "fas fa-search"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">Chevrolet</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">Chevrolet Corvette</a>
+                                <p class = "product-price">$ 98,000.00</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="paging">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" style="color: white; background: rgb(0, 110, 255);" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <footer class="footer-sec">
+            <div class="f-container">
+                <div class="f-row">
+                    <div class="footer-cols">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="./Help/faq.html">FAQ</a></li>
+                            <li><a href="./Contact/Contact.html">Contact Us</a></li>
+                            <li><a href="#">Dealer Details</a></li>
+                            <li><a href="#">Newsroom</a></li>
+                            <li><a href="#">Warranty and Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h4>shop</h4>
+                        <ul>
+                            <li><a href="#">Inventory</a></li>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">Trending cars</a></li>
+                            <li><a href="#">Categories</a></li>
+                        </ul>   
+                    </div>
+                    <div class="footer-cols">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-sec">&copy Copyright 2021 AutoHub Automobile Dealer <br> All rights reserved</div>
+       </footer>
+
+       <div class="access-div">
+        <div class="btn-group dropup">
+            <img src="../images/access.png" class="btn2" data-bs-toggle="dropdown"  style="height: 60px; width: 60px;">
+            <ul class="dropdown-menu">
+                <div class="accForm">
+                    <div class="access-header">Accessibility Options</div>
+                    <div class="options" >
+                        <button class="access-items" onclick="grayFunction()">
+                            <i class="fas fa-tint"></i> Grayscale <br>
+                        </button>
+                        <button class="access-items" onclick="fontFunction()">
+                            <i class="fas fa-font"></i> Font Size <br>
+                        </button>
+                        <button class="access-items" style="margin-bottom: 20px;" onclick="invertFunction()">
+                            <i class="fas fa-adjust"></i> Invert Color <br>
+                        </button>
+                        Brightness
+                        <div class="access-items2">
+                            <button class="access-items3" onclick="dimFunction()">
+                                <i class="fas fa-sun" style="opacity: 0.5;"></i> Dim<br>
+                            </button>
+                            <button class="access-items3" onclick="brightFunction()">
+                                <i class="far fa-sun"></i> Bright<br>
+                            </button>
+                        </div>
+                        <button class="access-items" onclick="resetFunction()">
+                            <i class="fas fa-redo-alt"></i> Reset All<br>
+                        </button>
+                       
+                    </div>
+                </div>
+            </ul>
+          </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+            $('.btn').click(function(){
+            $('.nav-item').toggleClass("show");
+            $('ul li').toggleClass("hide");
+            });
+        });
+        </script>
+
+        <script>
+            $('.accForm').bind('click', function (e) { e.stopPropagation() })
+        </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+    </html>
